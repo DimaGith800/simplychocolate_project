@@ -1,0 +1,310 @@
+@media (max-width: 1200px) {
+    body{
+        .header{
+            &_container {
+                max-width: 704px;
+
+                &--content {
+                    display: none;
+                }
+                
+                &--burgermenu {
+                    display: block;
+                }
+            }
+        }
+
+        main {
+            .treat {
+                padding-bottom: 50px;
+
+                &_container {
+                    background-image: url(img/chocolatecoveredincocoatablet.png);
+                    background-position: center;
+                    margin-top: 24px;
+                    padding-top: 671px;
+                    max-width: 704px;
+
+                    &--rectangle {
+                        display: none;
+                    }
+
+                    &--content {
+                        max-width: 624px;
+
+                        &--button {
+                            padding: 0;
+                            
+                            &--text {
+                                width: 82px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .pros {
+                &_container {
+                    max-width: 704px;
+                    flex-wrap: wrap;
+                    gap: 32px;
+
+                    &--content {
+                        &--border {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .products {
+                margin-left: 33px;
+            }
+
+            .exceptional {
+                padding-top: 100px;
+                margin-bottom: 100px;
+
+                &_container {
+                    max-width: 704px;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 32px;
+
+                    &--content {
+                        width: 335px;
+                        &--overflow {
+                            &--overlay {
+                                width: 335px;
+
+                                &--desc {
+                                    display: none;
+                                }
+
+                                &--mobiledesc {
+                                    display: block;
+                                    width: 290px;
+                                    font-family: Montserrat;
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                    line-height: 18px;
+                                    letter-spacing: -2%;
+                                    color: #111111;
+                                }
+                            }
+                        }
+                    }
+                } 
+            }
+
+            .how {
+                max-width: 615px;
+                border: none;
+
+                &_container {
+                    max-width: 614px;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    &--content {
+                        padding: 32px 72px 32px 32px;
+                        &--step {
+                            margin-bottom: 18px;
+                            
+                            p {
+                                width: 481px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        .header {
+            &_container {
+                max-width: 335px;
+            }
+        }
+
+        main {
+            .treat {
+                padding-bottom: 72px;
+
+                &_container {
+                    max-width: 335px;
+                    margin-top: 14px;
+                    padding-bottom: 20px;
+                    padding-top: 395px;
+
+                    &--content {
+                        max-width: 300px;
+                        flex-direction: column;
+                        align-items: flex-start;
+
+                        &--info {
+                            &--title {
+                                font-family: Montserrat;
+                                font-weight: 500;
+                                font-size: 20px;
+                                line-height: 24px;
+                                letter-spacing: -3%;
+                                width: 300px;
+
+                                .br_our {
+                                    display: none;
+                                }
+                            }
+
+                            &--interact {
+                                max-width: 293px;
+                                margin-bottom: 32px;
+
+                                &--buynow {
+                                    padding: 12px 28px;
+                                }
+
+                                &--howitsmade {
+                                    padding: 12px 28px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .pros {
+                padding-top: 20px;
+                padding-bottom: 20px;
+
+                &_container {
+                    max-width: 336px;
+                }
+            }
+
+            .exceptional {
+                padding-top: 72px;
+                margin-bottom: 72px;
+
+                &_title {
+                    margin-bottom: 24px;
+                    font-family: Montserrat;
+                    font-weight: 600;
+                    font-style: SemiBold;
+                    font-size: 20px;
+                    line-height: 24px;
+                    letter-spacing: -3%;
+                    text-align: center;
+                    text-transform: uppercase;
+                    width: 283px;
+                }
+
+                &_desc {
+                    margin-bottom: 32px;
+                    width: 347px;
+                }
+
+                &_container {
+                    max-width: 335px;
+                    grid-template-columns: 1fr;
+                    gap: 20px;
+                }
+            }
+
+            .how {
+                max-width: 335px;
+                padding-bottom: 72px;
+
+                &_title {
+                    font-family: Montserrat;
+                    font-weight: 600;
+                    font-style: SemiBold;
+                    font-size: 20px;
+                    line-height: 24px;
+                    letter-spacing: -3%;
+                    text-align: center;
+                    text-transform: uppercase;
+                    margin-bottom: 32px;
+                }
+
+                &_container {
+                    max-width: 335px;
+
+                    &--tutorial {
+                        &--img {
+                            display: none;
+                        }
+
+                        &--imga {
+                            border-radius: 15px;
+                            display: block;
+                        }
+
+                        &--play {
+                            top: 233px;
+                            right: 150px;
+                            padding: 11px 8px 9px 13px;
+                        }
+                    }
+
+                    &--content {
+                        padding: 15px 10px;
+
+                        &--title {
+                            width: 307px;
+                        }
+
+                        &--step {
+                            p {
+                                width: 300px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .products {
+                max-width: 335px;
+                margin: 0 auto;
+
+                &_title {
+                    font-family: Montserrat;
+                    font-weight: 600;
+                    font-style: SemiBold;
+                    font-size: 20px;
+                    line-height: 24px;
+                    letter-spacing: -3%;
+                    text-align: center;
+                    text-transform: uppercase;
+                    margin-bottom: 32px;
+                }
+
+                &_slider {
+                    width: 100%;
+                    max-width: 335px;
+                    margin: 0 auto;
+
+                    &--slides {
+                        &--slide {
+                            width: 335px;
+
+                            img {
+                                display: block;
+                                margin: 0 auto;
+                            }
+                        }
+                    }
+                }
+
+                &_dots {
+                    &--dot:nth-child(9) {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
