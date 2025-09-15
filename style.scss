@@ -1371,6 +1371,61 @@ main {
             }
         }
     }
+
+    .explore {
+        background-image: url(img/subscribebg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding-bottom: 72px;
+        padding-top: 72px;
+
+        &_title {
+            font-family: Montserrat;
+            font-weight: 600;
+            font-style: SemiBold;
+            font-size: 24px;
+            line-height: 28px;
+            letter-spacing: -3%;
+            text-align: center;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            width: 378px;
+            margin: 0 auto;
+            margin-bottom: 24px;
+        }
+
+        &_desc {
+            font-family: Montserrat;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 14px;
+            line-height: 18px;
+            letter-spacing: -2%;
+            text-align: center;
+            width: 485px;
+            margin: 0 auto;
+            color: #FFFFFF;
+            margin-bottom: 24px;
+        }
+
+        &_button {
+            font-family: Montserrat;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color:#FFFFFF;
+            padding:14px 40px;
+            background-color: #FD9222;
+            display: block;
+            margin: 0 auto;
+            border: none;
+            outline: none;
+            border-radius: 100px;
+            cursor: pointer;
+        }
+    }
 }
 
 footer {
@@ -1442,7 +1497,7 @@ footer {
 
                 &--socials {
                     width: 100%;
-                    max-width: 113 6px;
+                    max-width: 66px;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
