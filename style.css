@@ -117,6 +117,12 @@
   body main .sellers_details--desc {
     width: 306px;
   }
+  body main .loved {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+  }
   body footer .footer {
     max-width: 704px;
   }
@@ -270,6 +276,29 @@
   }
   body main .products_dots--dot:nth-child(9) {
     display: block;
+  }
+  body main .sellers {
+    margin-bottom: 72px;
+  }
+  body main .loved {
+    max-width: 360px;
+  }
+  body main .loved_title {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -3%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+  body main .loved_dots {
+    margin-top: 20px;
+  }
+  body main .loved_button {
+    margin-top: 32px;
   }
   body footer {
     padding-top: 32px;

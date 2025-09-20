@@ -153,6 +153,13 @@
                     }
                 }
             }
+
+            .loved {
+                width: 100%;
+                max-width: 750px;
+                margin: 0 auto;
+                padding-bottom: 100px;
+            }
         }
 
         footer {
@@ -362,7 +369,31 @@
             }
 
             .sellers {
+                margin-bottom: 72px;
+            }
 
+            .loved {
+                max-width: 360px;
+
+                &_title {
+                    font-family: Montserrat;
+                    font-weight: 600;
+                    font-style: SemiBold;
+                    font-size: 20px;
+                    line-height: 24px;
+                    letter-spacing: -3%;
+                    text-align: center;
+                    text-transform: uppercase;
+                    margin-bottom: 32px;
+                }
+
+                &_dots {
+                    margin-top: 20px;
+                }
+
+                &_button {
+                    margin-top: 32px;
+                }
             }
         }
 
