@@ -5,7 +5,7 @@ function initializeSlider(containerSelector, dotsSelector, slidesSelector) {
 
     // Виходимо з функції, якщо елементи не знайдені
     if (!sliderContainer || dots.length === 0 || slides.length === 0) {
-        console.error(`Не знайдено елементів для слайдера з селектором ${containerSelector}`);
+        // console.error(`Не знайдено елементів для слайдера з селектором ${containerSelector}`); // Можна закоментувати для продакшену
         return;
     }
 
@@ -20,8 +20,26 @@ function initializeSlider(containerSelector, dotsSelector, slidesSelector) {
 
         if (isMobile) {
             const currentScroll = sliderContainer.scrollLeft;
+            // Враховуємо gap при розрахунку
             const slideWidth = slides[0].offsetWidth;
-            const newIndex = Math.round(currentScroll / slideWidth);
+            const gap = 17; // Фіксований gap, як у products
+            
+            // Складніший розрахунок для коректного визначення індексу
+            // Обчислюємо середню позицію слайда
+            const slideCenter = slideWidth / 2;
+            let newIndex = 0;
+            let closestDistance = Infinity;
+
+            for (let i = 0; i < slides.length; i++) {
+                const slideStart = i * (slideWidth + gap);
+                const slideMiddle = slideStart + slideCenter;
+                const distance = Math.abs(currentScroll - slideStart); 
+
+                if (distance < closestDistance) {
+                    closestDistance = distance;
+                    newIndex = i;
+                }
+            }
 
             dots.forEach(dot => dot.classList.remove('active'));
             if (dots[newIndex]) {
@@ -44,14 +62,15 @@ function initializeSlider(containerSelector, dotsSelector, slidesSelector) {
         dot.addEventListener('click', () => {
             const isMobile = window.innerWidth <= 767;
             const slideWidth = slides[0].offsetWidth;
-            const gap = isMobile ? 0 : 17;
+            // Використовуємо gap 17px, як у .products
+            const gap = 17; 
             const scrollPosition = index * (slideWidth + gap);
 
             sliderContainer.scrollTo({
                 left: scrollPosition,
                 behavior: 'smooth'
             });
-            updateDots();
+            // updateDots викликається після scrollTimeout, тому тут можна не викликати
         });
     });
 
@@ -117,8 +136,10 @@ function initializeSlider(containerSelector, dotsSelector, slidesSelector) {
 }
 
 // === Виклики функції для кожного слайдера ===
-// Викликаємо функцію, передаючи унікальні селектори
 document.addEventListener('DOMContentLoaded', () => {
     initializeSlider('.products_slider', '.products_dots--dot', '.products_slider--slides--slide');
     initializeSlider('.loved_slider', '.loved_dots--dot', '.loved_slider--slides--slide');
+    
+    // !!! НОВИЙ ВИКЛИК ДЛЯ СЕКЦІЇ SELLERS !!!
+    initializeSlider('.sellers_container--content--slider', '.sellers_container--content--dots--dot', '.sellers_container--content--slider--slides--slide');
 });

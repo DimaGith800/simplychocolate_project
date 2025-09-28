@@ -349,20 +349,31 @@
         </section>
         <section class="sellers">
             <h2 class="sellers_title"><span>tOp</span> Sellers</h2>
-            <div class="sellers_img">
+            <div class="sellers_infoadaptive">
                 <img src="img/chocolatewithnuts.png" alt="nutschocolate">
-                <img src="img/chocolatewithalmonds.png" alt="almondchocolate">
-                <img src="img/greeknutschocolate.png" alt="greeknutchocalte">
-            </div>
-            <div class="sellers_details">
-                <p class="sellers_details--desc">Crazy enough chocolate originates from a bean just like the 
+                <p class="sellers_infoadaptive--desc">Crazy enough chocolate originates from a bean just like the 
                     coffee bean called Cacao. Cacao has been around for 
                     thousands of years and was first discovered by the Native 
                     American tribe called the Mayans.
                 </p>
-                <button class="sellers_details--button" id="openModalBtn">Buy now</button>
+                <img src="img/chocolatewithalmonds.png" alt="almondchocolate">
             </div>
-            <div class="sellers_container" id="modal" data-modal>
+            <div class="sellers_info">
+                <div class="sellers_info--img">
+                    <img src="img/chocolatewithnuts.png" alt="nutschocolate">
+                    <img src="img/chocolatewithalmonds.png" alt="almondchocolate">
+                    <img src="img/greeknutschocolate.png" alt="greeknutchocalte">
+                </div>
+                <div class="sellers_info--details">
+                    <p class="sellers_info--details--desc">Crazy enough chocolate originates from a bean just like the 
+                        coffee bean called Cacao. Cacao has been around for 
+                        thousands of years and was first discovered by the Native 
+                        American tribe called the Mayans.
+                    </p>
+                    <button class="sellers_info--details--button" id="openModalBtn">Buy now</button>
+                </div>
+            </div>
+            <div class="sellers_container" id="sellermodal">
                 <form class="sellers_container--content">
                     <span class="close" id="closeModalBtn">
                         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -371,6 +382,27 @@
                         </svg>
                     </span>
                     <h3 class="sellers_container--content--title"><span>bUY</span> nOW</h3>
+                    <div class="sellers_container--content--slider">
+                        <div class="sellers_container--content--slider--slides">
+                            <div class="sellers_container--content--slider--slides--slide">
+                                <img src="img/chocolatecurly.png" alt="curlychocolate">
+                                <button class="sellers_container--content--slider--slides--slide--mass">100 g</button>
+                            </div>
+                            <div class="sellers_container--content--slider--slides--slide">
+                                <img src="img/chocolatemix.png" alt="mixchocolateblackandwhite">
+                                <button class="sellers_container--content--slider--slides--slide--mass">200 g</button>
+                            </div>
+                            <div class="sellers_container--content--slider--slides--slide">
+                                <img src="img/chocolatecrispy.png" alt="crispychocolate">
+                                <button class="sellers_container--content--slider--slides--slide--mass">300 g</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sellers_container--content--dots">
+                        <span class="sellers_container--content--dots--dot active"></span>
+                        <span class="sellers_container--content--dots--dot"></span>
+                        <span class="sellers_container--content--dots--dot"></span>
+                    </div>
                     <div class="sellers_container--content--offers">
                         <div class="sellers_container--content--offers--offer">
                             <img src="img/chocolatecurly.png" alt="curlychocolate">
@@ -385,6 +417,7 @@
                             <button class="sellers_container--content--offers--offer--mass">300 g</button>
                         </div>
                     </div>
+                    <div></div>
                     <h5 class="sellers_container--content--inptitle">Personal information</h5>
                     <div class="sellers_container--content--initials">
                         <input class="sellers_container--content--initials--name" type="text" placeholder="Name">
@@ -404,7 +437,7 @@
                             <input type="text" placeholder="Phone number">
                         </div>
                     </label>
-                    <h5 class="sellers_container--content--inptitle">Email</h5>
+                    <h5 class="sellers_container--content--inptitle">Card number</h5>
                     <label class="sellers_container--content--inputcard">
                         <div class="sellers_container--content--inputcard--wrappe">
                             <input class="sellers_container--content--inputcard--wrappe--input" type="text" placeholder="Enter  card">
@@ -415,17 +448,17 @@
                     <textarea class="sellers_container--content--comment" placeholder="Enter text"></textarea>
                     <button class="sellers_container--content--submit" type="submit" id="openPopupBtn">Submit</button>
                 </form>
-            </div>
-            <div class="sellers_popup" popup>
-                <div class="sellers_popup--container" id="popupcont">
-                    <button class="sellers_popup--container--close" id="closePopupBtn">
-                        <img src="img/x.svg" alt="close">
-                    </button>
-                    <h3 class="sellers_popup--container--title">thank you!</h3>
-                    <p class="sellers_popup--container--desc">
-                        We are glad that you ordered our chocolate and we are giving you a
-                        <span>20%</span> discount on all our products.
-                    </p>
+                <div class="sellers_container--popup" id="sellerspopupu">
+                    <div class="sellers_container--popup--itself" id="sellerospopupcont">
+                        <button class="sellers_container--popup--itself--close" id="closePopupBtn">
+                            <img src="img/x.svg" alt="close">
+                        </button>
+                        <h3 class="sellers_container--popup--itself--title">thank you!</h3>
+                        <p class="sellers_container--popup--itself--desc">
+                            We are glad that you ordered our chocolate and we are giving you a
+                            <span>20%</span> discount on all our products.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -500,7 +533,42 @@
                 <span class="loved_dots--dot"></span>
                 <span class="loved_dots--dot"></span>
             </div>
-            <button class="loved_button">Leave a review</button>
+            <button class="loved_button" id="openReviewModalBtn">Leave a review</button>
+            <div class="loved_container" id="reviewmodal">
+                <form class="loved_container--content" id="reviewform">
+                    <span class="close" id="closeReviewModalBtn">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 7L7 21" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7 7L21 21" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    <h2 class="loved_container--content--title">
+                    LEAVE A REVIEW <br class="loved_title--br"> ABOUT <span>OUR CHOCOLATE</span>
+                    </h2>
+                    <input class="loved_container--content--inputname" type="text" placeholder="Name">                            
+                    <input class="loved_container--content--inputemail" type="text" placeholder="Email">
+                    <label class="loved_container--content--inputphone">
+                        <div class="loved_container--content--inputphone--wrapper">
+                            <div class="loved_container--content--inputphone--wrapper--region">
+                                <div class="loved_container--content--inputphone--wrapper--region--country"> 
+                                    <img src="img/flag.svg" alt="Ukraine">
+                                    <p class="loved_container--content--inputphone--wrapper--region--country--code">+380</p>
+                                </div>
+                            </div>
+                            <input type="text" placeholder="Phone number">
+                        </div>
+                    </label>
+                    <textarea class="loved_container--content--comment" placeholder="Enter text"></textarea>
+                    <button class="loved_container--content--submit" id="openreviewpopup">Send</button>
+                </form>
+                <div class="loved_container--popup" id="reviewpopup">
+                    <button class="loved_container--popup--close" id="closereviewpopupbtn">
+                        <img src="img/x.svg" alt="xsik">
+                    </button>
+                    <h2 class="loved_container--popup--title">thank you <br> for your feedback!</h2>
+                    <p class="loved_container--popup--desc">We are so happy to hear from you!</p>
+                </div>
+            </div>
         </section>
         <section class="explore">
             <h2 class="explore_title">exPLORE OUR NEW 
@@ -509,14 +577,26 @@
                 Chocolate is a true indulgence that will leave you craving more. Made 
                 with only the finest ingredients and handcrafted with the utmost 
                 care, each piece is a work of art that is sure to please.</p>
-            <button class="explore_button">Subscribe</button>
-            <div class="explore_container" id="modal" data-modal>
-                <form class="explore_container--content">
-                    <span class="close" id="closeModalBtn">
-                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11 1.10786L9.89214 0L5.5 4.39214L1.10786 0L0 1.10786L4.39214 5.5L0 9.89214L1.10786 11L5.5 6.60786L9.89214 11L11 9.89214L6.60786 5.5L11 1.10786Z" fill="black"/>
+            <button class="explore_button" id="openModalkaoBtn">Subscribe</button> 
+            <div class="explore_container" id="exploremodal">
+                <form class="explore_container--content" id="exploresform">
+                    <span class="explore_close" id="closeExploreModalBtn">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#FFFFFF" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 7L7 21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7 7L21 21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </span>
+                    <img class="explore_container--content--imga" src="img/chocolatelair.png" alt="toomuchchocolate">
+                    <img class="explore_container--content--imgphone" src="img/subscribemodalbgphone.png" alt="toomuchchocolate">
+                    <div class="explore_container--content--wrappero">
+                        <h2 class="explore_container--content--wrappero--title">Explore our <br>
+                            <span>new chocolate</span> first!
+                        </h2>
+                        <div class="explore_container--content--wrappero--input">
+                            <input class="explore_container--content--wrappero--input--itself" type="text" placeholder="Enter your email">
+                            <button class="explore_container--content--wrappero--input--submit" id="exploresubmitBtn">Submit</button>
+                        </div>
+                    </div>
                 </form>
             </div>
         </section>
@@ -560,10 +640,12 @@
             </nav>
         </div>
     </footer>
+    
+    <script src="sellerspopup.js"></script>
+    <script src="modalanpopup.js"></script>
     <script src="sldr.js"></script>
-    <script src="buynowmodal.js"></script>
     <script src="burger.js"></script>
     <script src="scrolldown.js"></script>
-    <script src="popup.js"></script>
+    <script src="exploremodal.js"></script>
 </body>
 </html>

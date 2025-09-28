@@ -125,22 +125,36 @@
 
             .products {
                 margin-left: 33px;
+                max-width: 718px;
+                margin: 0 auto;
+                margin-bottom: 100px;
             }
 
             .sellers {
                 margin-bottom: 100px;
 
-                &_img {
-                    max-width: 704px;
-                    margin: 0 auto;
-                    margin-bottom: 32px;
+                &_info {
+                    &--img {
+                        max-width: 704px;
+                        margin: 0 auto;
+                        margin-bottom: 32px;
 
-                    img {
-                        width: 344px;
-                        height: 464px;
+                        img {
+                            width: 344px;
+                            height: 464px;
+                        }
+                        img:nth-child(3) {
+                            display: none;
+                        }
                     }
-                    img:nth-child(3) {
-                        display: none;
+
+                    &--details {
+                        max-width: 704px;
+                        margin: 0 auto;
+
+                        &--desc {
+                            width: 306px;
+                        }
                     }
                 }
 
@@ -370,6 +384,323 @@
 
             .sellers {
                 margin-bottom: 72px;
+
+                &_title {
+                    margin-bottom: 32px;
+                }
+
+                &_info {
+                    &--img {
+                        display: none;
+                    }
+
+                    &--details {
+                        &--desc {
+                            display: none;
+                        }
+
+                        &--button {
+                            margin: 0 auto;
+                            margin-top: 20px;
+                            font-family: Montserrat;
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 100%;
+                            letter-spacing: 0%;
+                            padding: 12px 28px;
+                        }
+                    }
+                }
+
+                &_infoadaptive {
+                    width: 100%;
+                    max-width: 335px;
+                    margin: 0 auto;
+                    display: flex;
+                    flex-direction: column;
+
+                    img {
+                        width: 335px;
+                    }
+                    
+                    &--desc {
+                        font-family: Montserrat;
+                        font-weight: 400;
+                        font-style: Regular;
+                        font-size: 14px;
+                        line-height: 18px;
+                        letter-spacing: -2%;
+                        width: 306px;
+                        margin-top: 20px;
+                        margin-bottom: 32px;
+                    }
+                }
+
+                &_container {
+                    &--content {
+                        max-width: 311px;
+                        padding: 32px 24px;
+
+                        &--title {
+                            font-family: Montserrat;
+                            font-weight: 600;
+                            font-style: SemiBold;
+                            font-size: 20px;
+                            line-height: 24px;
+                            letter-spacing: -3%;
+                            text-align: center;
+                            text-transform: uppercase;
+                            margin-top: 3px;
+                        }
+
+                        &--offers {
+                            display: none;
+                        }
+
+                        &--slider {
+                            display: block;
+                            overflow-x: scroll;
+                            -ms-overflow-style: none;
+                            scrollbar-width: none;
+                            scroll-snap-type: none;
+                            margin-bottom: 24px; // Додаємо відступ перед точками/формою
+
+                            &::-webkit-scrollbar {
+                                display: none;
+                            }
+
+                            &--slides {
+                                display: flex;
+                                white-space: nowrap;
+                                gap: 17px;
+                                -webkit-user-select: none;
+                                -moz-user-select: none;
+                                -ms-user-select: none;
+                                user-select: none;
+                                margin-left: 15px;
+
+                                &--slide {
+                                    flex-shrink: 0;
+                                    width: 231px;
+                                    text-align: center;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    background-color: #FFFFFF;
+                                    padding: 28px 28px 32px 28px;
+                                    border-radius: 15px;
+                                    border: 1px solid #1111111A;
+
+                                    img {
+                                        width: 167px;
+                                        height: 148px;
+                                    }
+                                    
+                                    &--mass {
+                                        font-family: Montserrat;
+                                        font-weight: 600;
+                                        font-size: 14px;
+                                        line-height: 100%;
+                                        letter-spacing: 0%;
+                                        padding: 8px 29px;
+                                        color: #111111;
+                                        border: 1px solid #1111111A;
+                                        background-color: #FAFAFA;
+                                        border-radius: 100px;
+                                        margin-top: 16px;
+                                    }
+                                }
+                            }
+                        }
+
+                        &--dots {
+                            display: block;
+                            text-align: center;
+                            margin-top: 14px; /* Трохи менший відступ, оскільки він всередині модального вікна */
+                            margin-bottom: 32px;
+
+                            &--dot {
+                                display: inline-block;
+                                width: 13px;
+                                height: 13px;
+                                background-color: #E2E2E2;
+                                border-radius: 50%;
+                                margin: 0 5px;
+                                cursor: pointer;
+                                transition: background-color 0.3s ease, width 0.3s ease, border-radius 0.3s ease;
+
+                                &.active {
+                                    width: 28px;
+                                    background-color: #FD9222;
+                                    border-radius: 20px;
+                                }
+                            }
+                        }
+
+                        &--inptitle {
+                            font-family: Montserrat;
+                            font-weight: 500;
+                            font-size: 12px;
+                            line-height: 14px;
+                            letter-spacing: -2%;
+                        }
+
+                        &--initials {
+                            flex-direction: column;
+                            gap: 14px;
+
+                            &--name {
+                                font-family: Montserrat;
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 100%;
+                                letter-spacing: -2%;
+                                vertical-align: middle;
+                                padding: 14px 2px 14px 18px;
+                            }
+
+                            &--surname {
+                                font-family: Montserrat;
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 100%;
+                                letter-spacing: -2%;
+                                vertical-align: middle;
+                                padding: 14px 2px 14px 18px;
+                            }
+                        }
+
+                        &--inpemail {
+                            font-family: Montserrat;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 100%;
+                            letter-spacing: -2%;
+                            vertical-align: middle;
+                            padding: 14px 0 14px 18px;
+                        }
+
+                        &--inputphone {
+                            padding: 10px 17px 10px 18px;
+
+                            input {
+                                width: 138px;
+                                font-family: Montserrat;
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 100%;
+                                letter-spacing: -2%;
+                                vertical-align: middle;
+                                background-color: #FAFAFA;
+                            }
+
+                            &--wrapper {
+                                gap: 14px;
+
+                                &--region {
+                                    max-width: 74px;
+                                    gap: 8px;
+
+                                    &--country {
+                                        max-width: 66px;
+                                        gap: 8px;
+
+                                        img {
+                                            width: 24px;
+                                            height: 24px;
+                                        }
+
+                                        &--code {
+                                            font-family: Montserrat;
+                                            font-weight: 500;
+                                            font-size: 14px;
+                                            line-height: 100%;
+                                            letter-spacing: -2%;
+                                            vertical-align: middle;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &--inputcard {
+                            padding: 14px 18px;
+
+                            &--wrappe {
+                                max-width: 231px;
+
+                                &--input {
+                                    width: 111px;
+                                    font-family: Montserrat;
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                    line-height: 100%;
+                                    letter-spacing: -2%;
+                                    vertical-align: middle;
+                                    background-color: #FAFAFA;
+                                }
+                            }
+                        }
+
+                        &--comment {
+                            padding: 14px 0px 60px 18px;
+                            width: 100%;
+                            border-radius: 15px;
+                            font-family: Montserrat;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 100%;
+                            letter-spacing: -2%;
+                            vertical-align: middle;
+                        }
+
+                        &--submit {
+                            padding: 12px 28px;
+                        }
+                    }
+
+                    &--popup {
+                        &--itself {
+                            background-image: url(img/popupbgphone.png);
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            max-width: 311px;
+                            padding: 14px 14px 170px 68px;
+
+                            &--close {
+                                top: 14px;
+                                right: 14px;
+                            }
+
+                            &--title {
+                                font-family: Montserrat;
+                                font-weight: 600;
+                                font-style: SemiBold;
+                                font-size: 20px;
+                                line-height: 24px;
+                                letter-spacing: -2%;
+                                text-transform: uppercase;
+                                margin-top: 70px;
+                            }
+
+                            &--desc {
+                                font-family: Montserrat;
+                                font-weight: 400;
+                                font-size: 14px;
+                                line-height: 16px;
+                                letter-spacing: -2%;
+
+                                span {
+                                    font-family: Montserrat;
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                    line-height: 16px;
+                                    letter-spacing: -2%;
+                                }
+                            }
+                        }
+                    }
+                }
             }
 
             .loved {
@@ -393,6 +724,200 @@
 
                 &_button {
                     margin-top: 32px;
+                }
+
+                &_container {
+                    &--content {
+                        max-width: 311px;
+                        padding: 14px 14px 32px 24px;
+
+                        &--title {
+                            font-family: Montserrat;
+                            font-weight: 600;
+                            font-style: SemiBold;
+                            font-size: 20px;
+                            line-height: 24px;
+                            letter-spacing: -3%;
+                            text-transform: uppercase;
+                            margin-top: 15px;
+                            margin-bottom: 32px;
+
+                            br {
+                                display: block;
+                            }
+                        }
+
+                        &--inputname {
+                            padding: 14px 29px 14px 18px;
+                            margin-bottom: 14px;
+                        }
+
+                        &--inputemail {
+                            padding: 14px 29px 14px 18px;
+                            margin-bottom: 14px;
+                        }
+
+                        &--inputphone {
+                            padding: 10px 29px 10px 18px;
+                            margin-bottom: 14px;
+
+                            input {
+                                width: 138px;
+                            }
+
+                            &--wrapper {
+                                &--region {
+                                    max-width: 74px;
+
+                                    &--country {
+                                        max-width: 66px;
+                                        img {
+                                            width: 24px;
+                                            height: 24px;
+                                        }
+
+                                        &--code {
+                                            font-family: Montserrat;
+                                            font-weight: 500;
+                                            font-size: 14px;
+                                            line-height: 100%;
+                                            letter-spacing: -2%;
+                                            vertical-align: middle;
+
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &--comment {
+                            padding: 14px 38px 60px 18px;
+                        }
+
+                        &--submit {
+                            padding: 12px 28px;
+                            font-family: Montserrat;
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 100%;
+                            letter-spacing: 0%;
+
+                        }
+                    }
+
+                    &--popup {
+                        background-image: url(img/popupbgphone.png);
+                        padding: 14px 14px 178px 58px;
+                        max-width: 311px;
+
+                        &--title {
+                            margin-top: 42px;
+                            font-family: Montserrat;
+                            font-weight: 600;
+                            font-style: SemiBold;
+                            font-size: 20px;
+                            line-height: 24px;
+                            letter-spacing: -2%;
+                            text-transform: uppercase;
+                            margin-right: 3px;
+                        }
+
+                        &--desc {
+                            font-family: Montserrat;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 16px;
+                            letter-spacing: -2%;
+                            margin-right: 33px;
+                        }
+                    }
+                }
+            }
+
+            
+            .explore {
+                padding-top: 62px;
+                padding-bottom: 63px;
+
+                &_title {
+                    font-family: Montserrat;
+                    font-weight: 600;
+                    font-style: SemiBold;
+                    font-size: 20px;
+                    line-height: 24px;
+                    letter-spacing: -3%;
+                    text-align: center;
+                    text-transform: uppercase;
+                    width: 335px;
+                }
+
+                &_desc {
+                    width: 340px;
+                }
+
+                &_container {
+                    &--content {
+                        background-size: cover;
+                        background-position: center;
+                        max-width: 311px;
+
+                        &--imgphone {
+                            width: 311px;
+                            height: 169px;
+                            border-top-right-radius: 15px;
+                            border-top-left-radius: 15px;
+                        }
+
+                        &--imga {
+                            display: none;
+                        }
+
+                        &--wrappero {
+                            margin-top: -4px;
+                            padding: 32px 24px;
+
+                            &--title {
+                                font-family: Montserrat;
+                                font-weight: 600;
+                                font-style: SemiBold;
+                                font-size: 20px;
+                                line-height: 24px;
+                                letter-spacing: -3%;
+                                text-transform: uppercase;
+                                margin-bottom: 24px;
+                            }
+
+                            &--input {
+                                justify-content: normal;
+
+                                &--itself {
+                                    font-family: Montserrat;
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                    line-height: 100%;
+                                    letter-spacing: -2%;
+                                    vertical-align: middle;
+                                    border-radius: 25px;
+                                }
+
+                                &--submit {
+                                    margin-left: -100px;
+                                    font-family: Montserrat;
+                                    font-weight: 600;
+                                    font-size: 14px;
+                                    line-height: 100%;
+                                    letter-spacing: 0%;
+                                    text-align: center;
+                                    padding: 14px 22px;
+                                }
+                            }
+                        }
+
+                        .explore_close {
+                            top: 14px;
+                            right: 14px;
+                        }
+                    }
                 }
             }
         }
